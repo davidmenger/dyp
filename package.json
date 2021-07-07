@@ -1,10 +1,10 @@
 {
   "name": "dyp",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Fuzzy deep equal for asserting parts of objects",
   "main": "dyp.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./"
   },
   "repository": {
     "type": "git",
@@ -13,12 +13,21 @@
   "keywords": [
     "assert",
     "deep",
-    "fuzzy"
+    "fuzzy",
+    "deep equal",
+    "chai",
+    "jest",
+    "object",
+    "includes",
+    "object subset"
   ],
   "author": "David Menger",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/davidmenger/dyp/issues"
   },
-  "homepage": "https://github.com/davidmenger/dyp#readme"
+  "homepage": "https://github.com/davidmenger/dyp#readme",
+  "devDependencies": {
+    "mocha": "^9.0.1"
+  }
 }
