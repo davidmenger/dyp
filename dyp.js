@@ -23,10 +23,10 @@ function deepSubsetOf (actual, expected, message = 'Object is not a subset', key
         if (typeof actual !== typeof expected) {
             assert.fail(`${message}: expected type ${typeof expected}, given ${typeof actual} @${key}`);
         }
-        if (typeof actual === 'object' && expected === null) {
+        if (typeof actual === 'object' && actual && expected === null) {
             assert.fail(`${message}: expected null, given ${typeof actual} @${key}`);
         }
-        if (typeof expected === 'object' && actual === null) {
+        if (typeof expected === 'object' && expected && actual === null) {
             assert.fail(`${message}: expected type ${typeof expected}, given null @${key}`);
         }
         if (Array.isArray(expected) && !Array.isArray(actual)) {

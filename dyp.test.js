@@ -16,7 +16,8 @@ describe('dyp', () => {
             bar: 2,
             nested: {
                 sasa: 3,
-                lele: 4
+                lele: 4,
+                nullVal: null
             },
             list: [1, 2, 3],
             data: [
@@ -41,6 +42,37 @@ describe('dyp', () => {
                 { baz: 3 },
                 5
             ],
+        });
+    });
+
+    it('should work with null', () => {
+        // ok
+        dyp(actual, {
+            nested: {
+                nullVal: null
+            },
+        });
+
+        assert.throws(() => {
+            dyp(actual, {
+                nested: {
+                    nullVal: {}
+                },
+            });
+        });
+
+        assert.throws(() => {
+            dyp(actual, {
+                nested: {
+                    nullVal: 1
+                },
+            });
+        });
+
+        assert.throws(() => {
+            dyp(actual, {
+                nested: null
+            });
         });
     });
 

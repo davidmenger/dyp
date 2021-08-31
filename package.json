@@ -1,6 +1,6 @@
 {
   "name": "dyp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fuzzy deep equal for asserting parts of objects",
   "main": "dyp.js",
   "scripts": {
